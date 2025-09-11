@@ -1,7 +1,11 @@
-let email = "iykeisaman@gmail.com"
+function evenOrOdd(number) {
+    if (number % 2 == 0) {
+        console.log(`${number} is even`)
+    } else {
+        console.log(`${number} is odd`)
+    }
+}
 
-let slicedEmail = email.slice(0, email.indexOf("@") )
-let extension = email.slice(email.indexOf("@"))
+evenOrOdd(5)
 
-console.log(slicedEmail)
-console.log(extension)
+evenOrOdd(6)
