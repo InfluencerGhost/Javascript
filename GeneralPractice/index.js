@@ -1,11 +1,10 @@
-function evenOrOdd(number) {
-    if (number % 2 == 0) {
-        console.log(`${number} is even`)
-    } else {
-        console.log(`${number} is odd`)
-    }
+function getAverage(...numbers) {
+    let result = 0
+    for (let number of numbers) {
+        result += number
+    } return result/numbers.length
 }
 
-evenOrOdd(5)
 
-evenOrOdd(6)
+
+console.log(getAverage(2,2,2))
