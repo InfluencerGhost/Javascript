@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    font-family: cursive;
+}
+
+input {
+    height: 5em ;
+    margin: 0px 0px 20px 0px;
+    width: 3em;
+    border: solid 2px;
+    font-size: 2em;
+    text-align: center;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+input:focus {
+    outline: none;
+    border: solid gray;
+}
+
+button {
+    padding: 20px;
+    background-color: blue;
+    border-radius: 15px;
+    min-width: 10em;
+    color: white;
+
+}
