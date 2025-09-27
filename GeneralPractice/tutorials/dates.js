@@ -7,3 +7,7 @@ console.log(datee)
 // Date (number)
 const dateee = new Date(-100000000000000)
 console.log(dateee)
+
+const dateeee = new Date()
+
+console.log(dateeee.getFullYear())
