@@ -14,9 +14,4 @@ function createCounter() {
 
 const counter1 = new createCounter()
 
-counter1.increment()
-counter1.increment()
-counter1.increment()
-counter1.increment()
-counter1.increment()
-console.log(counter1.getCount())
+console.log(counter1.increment)
