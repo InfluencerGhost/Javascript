@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+  font-family: cursive;
+  background-image: url(./1.webp);
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+.clock {
+    font-size: 10em;
+}
+
+#second {
+    font-size: 0.5em;
+}
