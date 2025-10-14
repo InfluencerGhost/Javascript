@@ -1,16 +1,18 @@
-const hour = document.getElementById("hour")
-const minute =  document.getElementById("minute")
-const second =  document.getElementById("seconds")
+const clock = document.getElementById('clock');
+
 
 function updateClock () {
-const now = new Date()
-const hours = now.getHours() 
-const minutes = now.getMinutes()
-const seconds = now.getSeconds()
-hour.textContent = hours
-minute.textContent = minutes
-second.textContent = seconds
-
+    console.log("i was called")
+    const now = new Date();
+    let hours = now.getHours()
+    const meridiem = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12
+    hours = hours.toString().padStart(2, 0);
+    const minutes = now.getMinutes().toString().padStart(2, 0);
+    const seconds = now.getSeconds().toString().padStart(2, 0);
+    const timeString = `${hours}:${minutes}:${seconds} ${meridiem}`;
+    clock.textContent = timeString;     
 }
 
-updateClock()
+updateClock();
+setInterval(updateClock, 1000)

@@ -1,15 +1,21 @@
 body {
   text-align: center;
   font-family: cursive;
-  background-image: url(./1.webp);
+  background-image: url(./image1.jpeg);
+  background-size: cover;
   background-position:center;
   background-repeat: no-repeat;
+  height:100vh;
+  color: hsl(228, 91%, 46%);
 }
 
-.clock {
+h1 {
+    color: white;
+}
+
+
+
+#clock {
     font-size: 10em;
-}
-
-#second {
-    font-size: 0.5em;
+    backdrop-filter: blur(3px);   
 }
