@@ -1,4 +1,7 @@
 const display = document.getElementById("display");
+const start = document.getElementById("startBtn");
+const stopBtn = document.getElementById("stopBtn");
+const reset = document.getElementById("resetBtn");
 let timer = null;
 let startTime = 0;
 let elapsedTime = 0;
@@ -6,29 +9,44 @@ let isRunning = false;
 
 
 
-function start() {
+start.onclick = function() {
     console.log("Started");
 if (!isRunning) {
     startTime = Date.now() - elapsedTime;
-    timer = setInterval(update, 10)
+    timer = setInterval(update, 10);
     isRunning = true;
 }
 }
 
-function stop() {
-    
+stopBtn.onclick = function() {
+    console.log("Stopped");
+    if (isRunning) {
+        startTime = Date.now() - elapsedTime;
+        clearInterval(timer)
+        isRunning = false;
+}
 }
 
-function reset() {
-    
+reset.onclick = function() {
+    console.log("Reset");
+    clearInterval(timer);
+    startTime = 0;
+    elapsedTime = 0;
+    isRunning = false;
+    display.textContent = "00:00:00:00";
 }
 
 function update() {
     const currentTime = Date.now();
     elapsedTime = currentTime - startTime;
-    hours = Math.floor(elapsedTime / (1000 * 60 * 60)).padStart(2, 0);
-    minutes = Math.floor(elapsedTime / (1000 * 60) % 60).padStart(2, 0);
-    seconds = Math.floor(elapsedTime / (1000) % 60).padStart(2, 0);
-    milliseconds = Math.floor(elapsedTime % 1000 / 10).padStart(2, 0);
-    display.textcontent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
+    let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+    let minutes = Math.floor(elapsedTime / (1000 * 60) % 60);
+    let seconds = Math.floor(elapsedTime / (1000) % 60);
+    let milliseconds = Math.floor(elapsedTime % 1000 / 10);
+    hours = hours.toString().padStart(2, '0');
+    minutes = minutes.toString().padStart(2, '0');
+    seconds = seconds.toString().padStart(2, '0');
+    milliseconds = milliseconds.toString().padStart(2, '0');
+    
+    display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
 }
