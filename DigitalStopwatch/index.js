@@ -34,6 +34,7 @@ reset.onclick = function() {
     elapsedTime = 0;
     isRunning = false;
     display.textContent = "00:00:00:00";
+    
 }
 
 function update() {
