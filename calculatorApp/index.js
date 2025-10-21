@@ -1,6 +1,7 @@
-const display = document.getElementById('display')
+const display = document.getElementById('display');
+
 function appendToDisplay(input) {
-    display.textContent += input;
+    display.value += input;
 }
 
 function clearDisplay() {

@@ -8,6 +8,7 @@ body {
     text-align: left;
     background-color: hsl(0, 0%, 20%);
     color: white;
+    font-size: 5rem;
 }
 
 #calculator {
@@ -15,7 +16,7 @@ body {
     background-color: hsl(0, 0%, 10%);
     border-radius: 15px;
     max-width: 500px;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 #keys {
@@ -26,12 +27,11 @@ body {
 }
 button {
     width: 100px;
-    height:100px;
+    height: 100px;
     border: none;
     border-radius: 50px;
     color: white;
     background-color: hsla(0, 0%, 30%);
-    margin: 1px;
     text-align: center;
     transition: background-color 0.3s ease;
     font-size: 3rem;
