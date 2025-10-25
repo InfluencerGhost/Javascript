@@ -15,6 +15,8 @@ function acceptInput() {
 }
 
 function removeInput() {
+    const parent = document.querySelector("#fruits");
+    const child = document.querySelector("#fruits").lastElementChild;
     console.log("I was called");
-    document.querySelector("#fruits").removeChild(document.querySelector("#fruits").lastElementChild);
+    parent.removeChild(child);
 }
