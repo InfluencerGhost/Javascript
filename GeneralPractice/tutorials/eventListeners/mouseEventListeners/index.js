@@ -1,18 +1,20 @@
 // mouseover mouseout click
+
 const pElement = document.getElementById("box");
+const myBtn = document.getElementById("myBtn");
 
-pElement.addEventListener("click", (event) => {
-  event.target.style.backgroundColor = "tomato";
-  event.target.textContent = "Ouch that hurt! 🤕";
+myBtn.addEventListener("click", () => {
+  pElement.style.backgroundColor = "tomato";
+  pElement.textContent = "Ouch that hurt! 🤕";
 });
 
-pElement.addEventListener("mouseover", () => {
-  event.target.style.backgroundColor = "blue";
-  event.target.textContent = "Please don't click me! 😅";
+myBtn.addEventListener("mouseover", () => {
+  pElement.style.backgroundColor = "blue";
+  pElement.textContent = "Please don't click me! 😅";
 });
 
-pElement.addEventListener("mouseout", () => {
-  event.target.style.backgroundColor = "lightgreen";
-  event.target.textContent = "Don't click me! 😅";
+myBtn.addEventListener("mouseout", () => {
+  pElement.style.backgroundColor = "lightgreen";
+  pElement.textContent = "Don't click me! 😅";
 
 });

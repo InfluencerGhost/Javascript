@@ -1,0 +1,16 @@
+body {
+    font-family: cursive;
+}
+
+#myBox {
+    background-color: lightgreen;
+    height: 300px;
+    width: 300px;
+    font-size: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 25px;
+    text-shadow: 5px 5px 10px pink;
+}
