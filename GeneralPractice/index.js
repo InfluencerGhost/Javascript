@@ -1,14 +1,22 @@
-const chair = document.getElementById('chairImg');
-const theBtn = document.getElementById('theBtn');
+const theButtons = document.querySelectorAll(".theButtons");
 
-theBtn.addEventListener('click', event => {
-    console.log('i ran');
+const newButton = document.createElement("button");
+newButton.textContent = "Button 5";
+newButton.classList = "theButtons";
 
-    if (chair.style.visibility === 'hidden') {
-        chair.style.visibility = 'visible';
-        theBtn.textContent = "Hide";
-    } else {
-        chair.style.visibility = 'hidden';
-        theBtn.textContent = "Show";
-    }
+document.body.appendChild(newButton);
+
+console.log(theButtons);
+theButtons.forEach((element) => {
+  element.addEventListener(
+    "mouseover",
+    (event) => (event.target.style.backgroundColor = "green")
+  );
 });
+theButtons.forEach((element) => {
+  element.addEventListener(
+    "mouseout",
+    (event) => (event.target.style.backgroundColor = "hsl(211, 100%, 50%)")
+  );
+});
+
