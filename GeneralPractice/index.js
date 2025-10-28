@@ -1,10 +1,18 @@
-const theButtons = document.querySelectorAll(".theButtons");
+let theButtons = document.querySelectorAll(".theButtons");
 
 const newButton = document.createElement("button");
 newButton.textContent = "Button 5";
 newButton.classList = "theButtons";
-
 document.body.appendChild(newButton);
+
+const newButton1 = document.createElement("button");
+newButton1.textContent = "Button 6";
+newButton1.style.marginLeft = "10px";
+newButton1.classList = "theButtons";
+document.body.appendChild(newButton1);
+
+theButtons = document.querySelectorAll(".theButtons");
+console.log(theButtons);
 
 console.log(theButtons);
 theButtons.forEach((element) => {
@@ -20,3 +28,10 @@ theButtons.forEach((element) => {
   );
 });
 
+theButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.target.remove();
+    theButtons = document.querySelectorAll(".theButtons");
+    console.log(theButtons);
+  });
+});
