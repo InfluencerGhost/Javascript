@@ -1,40 +1,46 @@
 body {
-    font-size: 1.5em;
-    font-family: cursive;
+  font-size: 1.5em;
+  font-family: cursive;
 }
 
 img {
-    border: solid white;
-    border-radius: 15px;
-    margin: 10px;
+  border: solid white;
+  border-radius: 15px;
+  margin: 10px;
 }
 
 input {
-    padding: 10px;
-    border-radius: 15px;
+  padding: 10px;
+  border-radius: 15px;
 }
 .box {
-    border: 3px solid black;
-    width: 100%;
-    height: 8em;
-    text-align: left;
+  border: 3px solid black;
+  width: 100%;
+  height: 8em;
+  text-align: left;
 }
-button{
-    background-color: hsl(211, 100%, 50%);
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+button {
+  background-color: hsl(211, 100%, 50%);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-button:hover{
-    background-color: hsl(211, 100%, 41%);
-}
-
-#removeBtn {
-    background-color: hsl(0, 100%, 50%);
-}
-#removeBtn:hover{
-    background-color: hsl(0, 100%, 41%);
+button:hover {
+  background-color: hsl(211, 100%, 41%);
 }
 
+.enabled {
+  background-color: hsl(211, 100%, 51%);
+  color: white;
+}
+
+.hover {
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.5);
+}
+
+.disabled {
+    background-color: hsl(0, 0%, 60%);
+    color: hsl(0, 0%, 40%);
+}
