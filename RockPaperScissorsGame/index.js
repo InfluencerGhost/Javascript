@@ -4,7 +4,7 @@ const scissors = document.getElementById("scissors");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const resultDisplay = document.getElementById("results");
-const computerDescion = document.getElementById("computer-descion");
+const computerDescion = document.getElementById("computer-decision");
 const options = ["rock", "paper", "scissors"];
 
 let computerChoice;
