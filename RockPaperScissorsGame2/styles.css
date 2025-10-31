@@ -43,3 +43,11 @@ body {
   text-align: center;
   font-size: 5rem;
 }
+
+.greenText {
+  color: hsl(120, 100%, 25%);
+}
+
+.redText {
+  color: hsl(0, 100%, 50%);
+}
