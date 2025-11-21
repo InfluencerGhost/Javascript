@@ -4,10 +4,10 @@ myButtons.classList.add("enabled");
 
 myButtons.addEventListener('click', event => {
     if (event.target.classList.contains('disabled')) {
-    event.target.classList.replace('disabled', 'enabled'); 
-    event.target.textContent = "Enabled";
+        event.target.classList.replace('disabled', 'enabled'); 
+        event.target.textContent = "Enabled";
     } else {
-         event.target.classList.replace('enabled', 'disabled');
-         event.target.textContent = "Disabled";
+        event.target.classList.replace('enabled', 'disabled');
+        event.target.textContent = "Disabled";
     }
 })
