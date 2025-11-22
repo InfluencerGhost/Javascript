@@ -9,13 +9,43 @@
     width: 100%;
     display: none;
     transition: ease 1s;
+    height: 1700px;
+
 }
 
-button {
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 5rem;
+    padding: 25px;
+    margin: 10px;
+    background-color: hsla(0, 0%, 0%, 0.466);
+    color: white;
     border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
 }
 
 img.displaySlide {
     display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

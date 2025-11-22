@@ -1,6 +1,7 @@
 const slides = document.querySelectorAll(".slide");
 let slideIndex = 0;
 let intervalId = null;
+console.log(slideIndex)
 
 document.addEventListener("DOMContentLoaded", initializeSlider)
 
@@ -27,6 +28,10 @@ function showSlide(index) {
 }
 
 function prevSlide() {
+    clearInterval(intervalId);
+    slideIndex++;
+    console.log(slideIndex)
+    showSlide(slideIndex);
 
 }
 
