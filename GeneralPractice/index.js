@@ -1,13 +1,21 @@
-const myButtons = document.getElementById("myButtons");
+function task1() {
+    console.log("Task 1 completed.");
+}
 
-myButtons.classList.add("enabled");
+function task2() {
+    console.log("Task 2 completed.");
+}
 
-myButtons.addEventListener('click', event => {
-    if (event.target.classList.contains('disabled')) {
-        event.target.classList.replace('disabled', 'enabled'); 
-        event.target.textContent = "Enabled";
-    } else {
-        event.target.classList.replace('enabled', 'disabled');
-        event.target.textContent = "Disabled";
-    }
-})
+function task3() {
+    console.log("Task 3 completed.");
+}
+
+function task4() {
+    console.log("Task 4 completed.");
+}
+
+
+task1();
+task2();
+task3();
+task4();
