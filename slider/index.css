@@ -3,14 +3,19 @@
     height: 100%;
     margin: auto;
     overflow: hidden;
-} 
+}
 
 .slides img {
     width: 100%;
     display: none;
+    transition: ease 1s;
 }
 
 button {
     font-size: 5rem;
     border: none;
+}
+
+img.displaySlide {
+    display: block;
 }
