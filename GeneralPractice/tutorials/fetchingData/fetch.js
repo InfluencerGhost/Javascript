@@ -5,6 +5,10 @@ const errorText = document.getElementById("errorText");
 button.addEventListener("click", () => {
     const pokemon = input[0].value.toLowerCase();
     fetchData(pokemon);
+    if (pokemon === "") {
+        errorText.textContent = `please type in a pokemon`;
+    }
+
 });
 
 async function fetchData(pokemon) {
