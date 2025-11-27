@@ -1,13 +1,33 @@
-const img = document.getElementById("pokemon-image");
+const input = document.getElementsByTagName("input");
+const button = document.getElementById("pokeButton");
+const errorText = document.getElementById("errorText");
 
-fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-    .then(response => {
+button.addEventListener("click", () => {
+    const pokemon = input[0].value.toLowerCase();
+    fetchData(pokemon);
+});
+
+async function fetchData(pokemon) {
+    try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
 
         if (!response.ok) {
-            throw new Error("Unable to fetch response")
+            errorText.textContent = `As of ${Date()} ${pokemon} Does not exist`;
+            throw new Error("Unable to fetch resource")
         }
 
-        return response.json()
-    })
-    .then(data => img.style.backgroundImage = data.sprites.front_default)
-    .catch(error => console.error(error));
+        const data = await response.json()
+        console.log(data)
+
+        const img = document.createElement("img");
+        img.width = 200;
+        img.src = data.sprites.front_default;
+        document.body.appendChild(img);
+
+    }
+    catch (error) {
+        console.error(error)
+    }
+
+
+}
